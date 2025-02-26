@@ -1,26 +1,30 @@
-# BEM Controller <img align="right" height="100" src="https://ru.bem.info/S3zKVZJcFfltyiAz-bWVmw4o3IU.svgd" width="100"/> <img height=100 width=100 align="right" src="https://cdn-icons-png.flaticon.com/128/8277/8277654.png">
-A python script that helps you with the css naming and importing.
+# BEM Controller 
+<img align="right" height="100" src="https://ru.bem.info/S3zKVZJcFfltyiAz-bWVmw4o3IU.svgd" width="100"/> <img height=100 width=100 align="right" src="https://cdn-icons-png.flaticon.com/128/8277/8277654.png">
+A script to autoimport and autoname following the BEM.
+It also has a console to interact with BEM file structure.
+
 # Introduction
-When you use Block Element Modifier strategy you always follow the same steps:
+Block Element Modifier methodology is always about following the same steps:
 1. Create a folder
 2. Create a file
 3. Create a css class
 4. Create an import line
+5. Well, finally writing css
 
-Finally, you can write css and use a new component in html.
 ## Problems
-- It is slow and repetitive
-- It is impossible to remember all the components. You have to check them up again and again
-- If you want to rename or delete a component you have to follow the steps one more time. And also do not forget to REPEAT IT FOR EVERY SINGLE DESCENDANT
+- It is slow and repetitive work
+- It is impossible to remember all the components' names. You have to check them up again and again
+- To rename or delete a component you have to spend even more time and also keep in mind to repeat it for every descendant.
 
 ## IDE plugins
-I did not find any plugins taking those exact steps like I mentioned.
-Also, these plugins could easily act different and other IDEs.
-So, that is the reason why I suggest using a script.
+I did not find any plugins for these exact deeds.
+Apart from that, addons could easily act different in other IDEs.
+So, that is the reason I suggest using a script file for these.
 
 # Quick overview
-I implemented 3 classes Block, Element and Modifier. 
-They could be used to program a file structure (although css could be injected too)
+The program contains classes of Block, Element and Modifier.
+They could be used for programming a file structure (but css could be injected too)
+
 ## Block creation example
 ```python
 from pathlib import Path
@@ -105,3 +109,16 @@ Renamed
 - Add css editing in console
 - Existing names autocomplete 
 - Console oneline commands support
+
+
+# Summing up
+This project is considered as my experiment in file automation. I wrote it when I was making layouts for Yandex-Practicum. 
+## Mistakes
+Actually, I do not really like the result. I made a huge mistake with base classes and spent some time to make the final program work fine.
+- Odd starting concept
+- Too difficult class planning
+- Lots of unnecessary overrides
+- Different coding language
+## Conclusion
+Think I should focus on making SOLID classes in my next projects. 
+And besides, the python is not an option for this at all. I should look into TypeScript next time, I suppose.
