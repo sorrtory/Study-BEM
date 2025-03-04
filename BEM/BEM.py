@@ -77,9 +77,6 @@ class BEM:
 
         self.autolaunch = False     # Launch vs code after creation
 
-        # This is the path related from cssFile to blocks
-        # It will be used for css import
-        self.cssImport = Path(os.path.relpath(blocks, css.parent))
 
         # Find existing blocks
         self.parse(False)
@@ -494,7 +491,7 @@ class _BEMGen:
     def __init__(self, bem: BEM, name: str):
         self.BEM = bem                      # BEM class instance
         self.name = name                    # Name of object
-        self.cssName = ""                   # CSS class name                                           
+        self.cssName = ""                   # CSS class name
         self.path = Path()                  # Absolute path to object location
         self.cssFile = Path()               # Abs path to object's css file
         self.css = ""                       # CSS code. Not live time
@@ -531,8 +528,10 @@ class _BEMGen:
         line = "/* %s %s */\n" % (self.name,
                                   self.type)
 
+        relative_path = os.path.relpath(self.cssFile, self.BEM.cssFile.parent)
+
         # Import line
-        line += f"@import url(\"{self.BEM.cssImport / self.cssFile}\");\n"
+        line += f"@import url(\"{relative_path}\");\n"
 
         return line
 

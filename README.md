@@ -2,6 +2,7 @@
 <img align="right" height="100" src="https://ru.bem.info/S3zKVZJcFfltyiAz-bWVmw4o3IU.svgd" width="100"/> <img height=100 width=100 align="right" src="https://cdn-icons-png.flaticon.com/128/8277/8277654.png">
 A script to autoimport and autoname following the BEM.
 It also has a console to interact with BEM file structure.
+Also the submodule branch is available.
 
 # Introduction
 Block Element Modifier methodology is always about following the same steps:
