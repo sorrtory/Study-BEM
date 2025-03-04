@@ -6,7 +6,11 @@ Also the submodule branch is available.
 
 # BEM controller. Submodule
 This is the branch to be added as a submodule to your project:
-```git submodule add -b submodule https://github.com/sorrtory/Study-BEM.git```
+```bash
+git submodule add -b submodule https://github.com/sorrtory/Study-BEM.git
+```
 
 After that you can use it as a BEM controller:
-```python3 ./Study-BEM/BEM.py```
+```bash
+python3 ./Study-BEM/BEM.py
+```
