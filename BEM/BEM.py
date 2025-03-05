@@ -250,11 +250,10 @@ class BEM:
             block = self._get_object(self._input(
                 f"Set parent block name: "), self.blocks)
             if block:
-                element = self._input(
-                    "Set element name(empty for block modifier): ")
+                element = self._input("Set element name(empty for block modifier): ")
                 element = "__" + element.lstrip("_")
                 ancestor = None
-                if element == "":
+                if element == "__":
                     ancestor = block
                 else:
                     ancestor = self._get_object(element, block.elements)
