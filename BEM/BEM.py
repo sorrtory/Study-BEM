@@ -261,11 +261,9 @@ class BEM:
                     modifier_name = self._input("Set modifier name: ")
 
                     if create:
-                        values = self._input(
-                            "Set modifier values by spaces(empty for bool): ")
-                        if values == "":
-                            values = None
-                        data[3] = values.split(" ")
+                        values = self._input("Set modifier values by spaces(empty for bool): ")
+                        if values != "":
+                            data[3] = values.split(" ")
                     data[1] = modifier_name
                     data[2] = ancestor
 
